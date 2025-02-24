@@ -15,10 +15,11 @@ This document transcribes all SQL queries, results, and system messages from the
 **SQL Query:**
 
 ```sql
+
 CREATE DATABASE YouTube_db;
 USE YouTube_db;
 
-## **SELECTING RAW DATA**
+# **SELECTING RAW DATA**
 
 SELECT 
   NOMBRE,  
@@ -27,14 +28,14 @@ SELECT
   total_views  
 FROM top_uk_youtubers_2024;
 
-## **Identifying Data Quality Issues**
+# **Identifying Data Quality Issues**
 
 SELECT 
   CHARINDEX('@', NOMBRE) AS position_of_at, 
   NOMBRE 
 FROM top_uk_youtubers_2024;
 
-## **Cleaning Channel Names**
+# **Cleaning Channel Names**
 
 SELECT 
   CAST(SUBSTRING(NOMBRE, 1, CHARINDEX('@', NOMBRE) -1 ) AS VARCHAR(100)) AS channel_name,
