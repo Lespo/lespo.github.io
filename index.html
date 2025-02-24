@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Your Name] - Data Portfolio</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        header {
+            text-align: center;
+            padding: 2rem 0;
+            border-bottom: 3px solid #eee;
+        }
+        .badge {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin: 0 5px;
+            color: white;
+            text-decoration: none;
+        }
+        section {
+            margin: 2rem 0;
+            padding: 1rem;
+            background: #f9f9f9;
+            border-radius: 10px;
+        }
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+        .project {
+            margin: 1.5rem 0;
+            padding: 1rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        code {
+            background: #f4f4f4;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+        pre {
+            background: #1e1e1e;
+            color: #d4d4d4;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>👋 Hi, I'm [Your Name]</h1>
+        <p><strong>Data Engineer | Analytics Specialist | SQL & Python Developer</strong></p>
+        <p>
+            📍 [Your Location] | 📧 [Your Email]<br>
+            <a href="https://linkedin.com/in/yourprofile" class="badge" style="background: #0077B5;">LinkedIn</a>
+            <a href="https://github.com/yourusername" class="badge" style="background: #181717;">GitHub</a>
+        </p>
+    </header>
+
+    <section>
+        <h2>🛠️ Technical Skills</h2>
+        <h3>Languages:</h3>
+        <ul>
+            <li>SQL (Advanced)</li>
+            <li>Python (Pandas, PySpark)</li>
+            <li>R</li>
+        </ul>
+        
+        <h3>Tools & Platforms:</h3>
+        <ul>
+            <li>ETL/ELT: Apache Airflow, dbt, AWS Glue</li>
+            <li>Databases: PostgreSQL, BigQuery, Snowflake</li>
+            <li>Visualization: Tableau, Power BI, Looker</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>📂 Featured Projects</h2>
+        
+        <div class="project">
+            <h3>1. YouTube Analytics Pipeline</h3>
+            <p><strong>Tech Stack:</strong> SQL Server, Python, Apache Airflow, Tableau</p>
+            <ul>
+                <li>Built end-to-end ETL pipeline processing 10M+ rows</li>
+                <li>Data cleaning using SQL string functions</li>
+            </ul>
+            <pre><code>SELECT 
+  CAST(SUBSTRING(NOMBRE, 1, CHARINDEX('@', NOMBRE)-1) AS channel_name,
+  total_subscribers 
+FROM top_uk_youtubers_2024;</code></pre>
+        </div>
+
+        <div class="project">
+            <h3>2. Real-Time Sales Dashboard</h3>
+            <p><strong>Tech Stack:</strong> Snowflake, dbt, Looker</p>
+            <ul>
+                <li>Integrated 15+ retail APIs</li>
+                <li>65% reduction in report generation time</li>
+            </ul>
+            <img src="https://via.placeholder.com/800x400.png?text=Sales+Dashboard" alt="Sales Dashboard" style="width: 100%; border-radius: 8px;">
+        </div>
+    </section>
+
+    <section>
+        <h2>💼 Professional Experience</h2>
+        
+        <h3>Data Engineer @ Tech Corp (2022–Present)</h3>
+        <ul>
+            <li>Optimized Spark jobs reducing cloud costs by 30%</li>
+            <li>Migrated legacy pipelines to Snowflake</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>📬 Let's Connect</h2>
+        <ul>
+            <li>Portfolio: <a href="https://yourportfolio.com">yourportfolio.com</a></li>
+            <li>GitHub: <a href="https://github.com/yourusername">github.com/yourusername</a></li>
+            <li>LinkedIn: <a href="https://linkedin.com/in/yourprofile">linkedin.com/in/yourprofile</a></li>
+        </ul>
+    </section>
+
+    <footer style="text-align: center; padding: 2rem; color: #666;">
+        <p>© 2024 [Your Name]. All rights reserved.</p>
+    </footer>
+</body>
+</html>
