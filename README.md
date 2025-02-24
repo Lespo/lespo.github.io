@@ -1,44 +1,45 @@
----
-title: "[Your Name] - Data Analytics & Engineering Portfolio"
-description: "Showcasing data solutions, ETL pipelines, and analytical insights"
----
+# Data Portfolio
 
-# 👋 Hi, I'm [Your Name]  
-**Data Engineer | Analytics Specialist | SQL & Python Developer**  
-📍 [Your Location] | 📧 [Your Email] | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin)](https://linkedin.com/in/yourprofile) [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github)](https://github.com/yourusername)
 
----
+This is my portfolio website
 
-## 🛠️ Technical Skills  
-**Languages:**  
-- SQL (Advanced)  
-- Python (Pandas, PySpark)  
-- R  
 
-**Tools & Platforms:**  
-- ETL/ELT: Apache Airflow, dbt, AWS Glue  
-- Databases: PostgreSQL, BigQuery, Snowflake  
-- Visualization: Tableau, Power BI, Looker  
-- Cloud: AWS, GCP, Azure  
+# SQL Data Processing: UK Top YouTubers 2024
 
-**Certifications:**  
-- Google Data Engineer  
-- AWS Certified Solutions Architect  
-- Databricks Spark Developer  
+This document transcribes all SQL queries, results, and system messages from the provided screenshots.
 
 ---
 
-## 📂 Featured Projects  
+## 1. Database Creation
 
-### 1. YouTube Analytics Pipeline ([Code](https://github.com/yourrepo/youtube-pipeline))  
-**Tech Stack:** SQL Server, Python, Apache Airflow, Tableau  
-- Built an end-to-end ETL pipeline to process 10M+ rows of UK YouTuber data  
-- Cleaned channel names using `SUBSTRING` and `CHARINDEX` ([Example](https://yourportfolio.com/youtube-cleaning))  
-- Created Tableau dashboards showing subscriber/view trends  
+**SQL Query:**
 
 ```sql
--- Sample cleaning query
+
+CREATE DATABASE YouTube_db;
+USE YouTube_db;
+
+# **SELECTING RAW DATA**
+
 SELECT 
-  CAST(SUBSTRING(NOMBRE, 1, CHARINDEX('@', NOMBRE)-1) AS channel_name,
-  total_subscribers 
+  NOMBRE,  
+  total_subscribers,  
+  total_videos,  
+  total_views  
+FROM top_uk_youtubers_2024;
+
+# **Identifying Data Quality Issues**
+
+SELECT 
+  CHARINDEX('@', NOMBRE) AS position_of_at, 
+  NOMBRE 
+FROM top_uk_youtubers_2024;
+
+# **Cleaning Channel Names**
+
+SELECT 
+  CAST(SUBSTRING(NOMBRE, 1, CHARINDEX('@', NOMBRE) -1 ) AS VARCHAR(100)) AS channel_name,
+  total_subscribers,
+  total_videos,
+  total_views
 FROM top_uk_youtubers_2024;
