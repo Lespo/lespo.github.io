@@ -1,0 +1,84 @@
+@import url(fontawesome-all.min.css);
+@import url("https://fonts.googleapis.com/css?family=Merriweather:300,700,300italic,700italic|Source+Sans+Pro:900");
+
+body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        header {
+            text-align: center;
+            padding: 2rem 0;
+            border-bottom: 3px solid #eee;
+        }
+        .badge {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin: 0 5px;
+            color: white;
+            text-decoration: none;
+        }
+        .large {
+          -moz-appearance: none;
+		-webkit-appearance: none;
+		-ms-appearance: none;
+		appearance: none;
+		-moz-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+		-webkit-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+		-ms-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+		transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+		border: 0;
+		border-radius: 0;
+		cursor: pointer;
+		display: inline-block;
+		font-family: "Source Sans Pro", Helvetica, sans-serif;
+		font-size: 0.8rem;
+		font-weight: 900;
+		letter-spacing: 0.075em;
+		height: 3rem;
+		line-height: 3rem;
+		padding: 0 2rem;
+		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
+		white-space: nowrap;
+        }
+        .large:hover {
+          background-color: #ddd;
+          color: black;
+        }
+        section {
+            margin: 2rem 0;
+            padding: 1rem;
+            background: #f9f9f9;
+            border-radius: 10px;
+        }
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+        .project {
+            margin: 1.5rem 0;
+            padding: 1rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        code {
+            background: #f4f4f4;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+        pre {
+            background: #1e1e1e;
+            color: #d4d4d4;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
